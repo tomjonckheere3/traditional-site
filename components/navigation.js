@@ -4,7 +4,7 @@ export default function Navigation() {
     return (
         <nav className="flex items-center justify-between flex-wrap bg-green-500 p-6">
         <div className="flex items-center flex-shrink-0 text-white ml-10 mr-6">
-          <span className="font-semibold text-xl tracking-tight">Traditional Site</span>
+          <span className="font-semibold text-xl tracking-tight">BeerLovers Inc.</span>
         </div>
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
           <div className="text-sm lg:flex-grow">
@@ -23,7 +23,7 @@ export default function Navigation() {
                 Contact us
                 </a>
             </Link>
-            <Link href="/info">
+            <Link href="/general-info">
                 <a className="block lg:inline-block px-3 py-2 rounded text-white hover:bg-green-600 hover:text-white mr-4">
                 General info
                 </a>

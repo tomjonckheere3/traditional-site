@@ -12,12 +12,13 @@ import PostTitle from 'components/post-title'
 import Head from 'next/head'
 import { CMS_NAME } from 'lib/constants'
 
-export default function Post({ post, morePosts, preview }) {
+export default function Post({ params, post, morePosts, preview }) {
   const router = useRouter()
 
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
+
 
   return (
     <Layout preview={preview}>
@@ -53,8 +54,11 @@ export default function Post({ post, morePosts, preview }) {
 
 export async function getStaticProps({ params, preview = false }) {
   const data = await getPostAndMorePosts(params.slug, preview)
+  console.log(params)
+
   return {
     props: {
+      params,
       preview,
       post: data.post,
       morePosts: data.morePosts || [],
